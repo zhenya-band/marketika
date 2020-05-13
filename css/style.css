@@ -42,6 +42,11 @@ body {
   color: #ffffff;
   border: none;
   background: linear-gradient(to right, #fe985b 0%, #fe4fa7 100%);
+  transition: 0.2s;
+}
+
+.btn-main:hover {
+  background: linear-gradient(to right, #fe985b 0%, #fe985c 100%);
 }
 
 .btn-secondary {
@@ -55,6 +60,12 @@ body {
   background-color: #ffffff;
   color: #414141;
   border: 1px solid #979797;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  color: #fe4fa7;
+  border-color: #fe4fa7;
 }
 
 .btn-free {
@@ -68,6 +79,11 @@ body {
   background-color: #ffffff;
   color: #414141;
   border: none;
+  transition: 0.2s;
+}
+
+.btn-free:hover {
+  color: #fe4fa7;
 }
 
 .section-header {
@@ -149,10 +165,15 @@ body {
   font-weight: 400;
   padding: 16px 20px;
   outline: none;
+  transition: 0.2s;
 }
 
 .section-header-wrapper__form-input input::placeholder {
   color: #ffffff;
+}
+
+.section-header-wrapper__form-input input:focus {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .section-promo {
@@ -344,4 +365,80 @@ body {
   line-height: 30px;
   width: 50%;
   margin: 0 auto 40px;
+}
+
+.section-footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-footer__logo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.section-footer__nav {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 75px;
+}
+
+.section-footer__nav li+li {
+  margin-left: 60px;
+}
+
+.section-footer__nav li a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #464646;
+  transition: 0.2s;
+}
+
+.section-footer__nav li a:hover,
+.section-footer__nav li a.active {
+  color: #fe50a6;
+}
+
+.section-footer__copyright_and_links {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.section-footer__copyright_and_links-copyright {
+  color: #464646;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.helper-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.helper-links li+li {
+  margin-left: 20px;
+}
+
+.helper-links li a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  color: #464646;
+}
+
+.helper-links li a:hover {
+  text-decoration: underline;
 }
