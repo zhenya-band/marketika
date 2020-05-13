@@ -1,0 +1,187 @@
+// === Mixins ===
+@mixin font-lato {
+    font-family: 'Lato', sans-serif;
+}
+// === / Mixins ===
+
+// === Variables ===
+$color-white: #ffffff;
+// === / Variables ===
+
+// === Common ===
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-lato;
+    color: #414141;
+}
+.section-outer {}
+
+.section-inner {
+    width: 1180px;
+    margin: 0 auto;
+}
+// === / Common ===
+
+// === header ===
+.section-header {
+    color: $color-white;
+    background: url('../img/bg-header.png') no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+
+    .section-inner {
+        height: 100vh;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #142729;
+        opacity: 0.47;
+    }
+
+
+
+    &-logo {
+        padding-top: 35px;
+        font-weight: bold;
+        font-size: 24px;
+        flex-shrink: 1;
+    }
+
+    &-content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    &-wrapper {
+        margin: 0 auto;
+
+        &__title {
+            text-align: center;
+            font-size: 55px;
+            font-weight: bold;
+            line-height: 60px;
+            margin-bottom: 17px;
+        }
+
+        &__subtitle {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            width: 67%;
+            margin: 0 auto 44px;
+        }
+
+        &__form {
+            display: flex;
+            
+            &-input {
+                flex: 1;
+                padding-right: 40px;
+                input {
+                    border: none;
+                    border-radius: 4px;
+                    background-color: rgba($color: $color-white, $alpha: 0.25);
+                    width: 100%;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 16px 20px;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $color-white;
+                    }
+                }
+            }
+
+            &-button {
+                button {
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 4px;
+                    background: linear-gradient(to right, #fe985b 0%, #fe4fa7 100%);
+                    padding: 16px 50px;
+                    outline: none;
+                    color: $color-white;
+                    cursor: pointer;
+                 }
+            }
+        }
+
+    }
+
+}
+// === / header ===
+
+// === promo ===
+
+.section-promo {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-promo-1{
+    display: flex;
+
+    &__content,
+    &__video {
+        flex-basis: 50%;
+    }
+
+    &__content {
+        padding-right: 90px;
+        .title {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 51px;
+            bottom: 60px;
+        }
+        .subtitle {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+        .text {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 27px;
+            color: #6c6c6c;
+            margin-top: 14px;
+        }
+    }
+
+    &__video {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.section-promo-2 {
+
+}
+
+// === / promo ===
